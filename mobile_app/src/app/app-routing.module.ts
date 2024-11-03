@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },  {
+    path: 'video-upload',
+    loadChildren: () => import('./video-upload/video-upload.module').then( m => m.VideoUploadPageModule)
   }
+
 
 
 ];

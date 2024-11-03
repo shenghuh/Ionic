@@ -18,7 +18,7 @@ export class LoginPage {
     const storedPassword = localStorage.getItem('userPassword');
   
     if (this.email === storedEmail && this.password === storedPassword) {
-      this.router.navigate(['/folder/inbox']);
+      this.router.navigate(['/video-upload']);
     } else {
       alert('Invalid credentials. Please try again.');
     }

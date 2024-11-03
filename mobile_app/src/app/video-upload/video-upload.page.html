@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Upload Video</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <input type="file" accept="video/*" (change)="onFileSelected($event)" />
+        </ion-item>
+
+        <ion-button expand="full" (click)="processVideo()" [disabled]="!selectedVideo">
+          Process Video
+        </ion-button>
+
+        <div *ngIf="processedVideoUrl">
+          <h3>Processed Video</h3>
+          <video controls [src]="processedVideoUrl" width="100%"></video>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
